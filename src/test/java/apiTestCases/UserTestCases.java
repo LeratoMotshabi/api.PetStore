@@ -14,7 +14,7 @@ import io.restassured.response.Response;
 public class UserTestCases {
 	
 	Faker faker = new Faker();;
-	User userPayload = new User();;
+	User userPayload = new User();
 	
 	
 //	public void setupData(String id, String username, String firstName, String lastName, 
@@ -35,7 +35,8 @@ public class UserTestCases {
 //	}
 	
 	@Test(priority=0,dataProvider="UserData",dataProviderClass=XLDataProvider.class)
-	public void testPostUser(String id, String username, String firstName, String lastName, String email, String password, String phone)
+	public void testPostUser(String id, String username, String firstName, String lastName, 
+			String email, String password, String phone)
 	{
 		
 		userPayload = new User();
